@@ -46,7 +46,7 @@ class Twitter_Bootstrap_Form_Element_Button extends Twitter_Bootstrap_Form_Eleme
             // Disable automatic label escaping
             $options['escape'] = false;
 
-            $this->_icon = 'icon-' . $options['icon'];
+            $this->_icon = 'glyphicon glyphicon-' . $options['icon'];
 
             if (isset($options['whiteIcon']) && true === $options['whiteIcon']) {
                 $this->_icon .= ' icon-white';
