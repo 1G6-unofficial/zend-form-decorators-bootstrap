@@ -16,7 +16,7 @@
  * @subpackage SubForm
  * @author Adeline Cachier <acachier@1g6.biz>
  */
-class Twitter_Bootstrap_Form_SubForm_Inline extends Twitter_Bootstrap_Form_Inline
+class Twitter_Bootstrap_SubForm_Inline extends Twitter_Bootstrap_Form_Inline
 {
     /**
      * Whether or not form elements are members of an array

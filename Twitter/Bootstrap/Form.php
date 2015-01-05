@@ -42,10 +42,14 @@ abstract class Twitter_Bootstrap_Form extends Zend_Form
     {
         $this->_initializePrefixes();
 
-        $this->setDecorators(array(
-            'FormElements',
-            'Form'
-        ));
+        if(isset($options['isSubform'])) {
+            $this->setDecorators(array('FormElements'));
+        } else {
+            $this->setDecorators(array(
+                'FormElements',
+                'Form'
+            ));
+        }
 
         parent::__construct($options);
 

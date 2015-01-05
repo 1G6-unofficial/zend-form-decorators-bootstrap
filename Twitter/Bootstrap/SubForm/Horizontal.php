@@ -24,4 +24,10 @@ class Twitter_Bootstrap_SubForm_Horizontal extends Twitter_Bootstrap_Form_Horizo
      */
     protected $_isArray = true;
 
+    public function __construct($options = null)
+    {
+        $options['isSubform'] = true;
+        parent::__construct($options);
+    }
+
 }
