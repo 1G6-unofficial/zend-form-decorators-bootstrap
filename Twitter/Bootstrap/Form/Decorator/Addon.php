@@ -69,7 +69,6 @@ class Twitter_Bootstrap_Form_Decorator_Addon extends Zend_Form_Decorator_Abstrac
     protected function _prepareAddon(&$addon)
     {
         $addonClass = 'input-group-addon';
-
         // Convert into a Zend_Config object if we recieved an array
         if (is_array($addon)) {
             $addon = new Zend_Config($addon, true);
@@ -83,6 +82,11 @@ class Twitter_Bootstrap_Form_Decorator_Addon extends Zend_Form_Decorator_Abstrac
 
             $addonElement = new Zend_Form_Element_Checkbox($addon);
             $addon = $this->_renderElement($addonElement);
+        }
+
+        if ($addon instanceof Twitter_Bootstrap_Form_Element_Button) {
+            $addon = $this->_renderElement($addon);
+            $addonClass = 'input-group-btn';
         }
 
         // Check to see if we recieved a button
